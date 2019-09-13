@@ -8,7 +8,7 @@ function App() {
     <div className="App">
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
-        <Bouton value='Test'></Bouton>
+        <Bouton value='Test' onClick={()=> alert('clic')}></Bouton>
         <p>
           Edit <code>src/App.js</code> and save to reload.
         </p>
