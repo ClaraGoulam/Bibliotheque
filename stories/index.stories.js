@@ -6,6 +6,7 @@ import { linkTo } from '@storybook/addon-links';
 
 import { Button, Welcome } from '@storybook/react/demo';
 import Bouton from '../src/Components/Bouton'
+import Autocomplete from '../src/Components/Autocomplete'
 
 storiesOf('Bouton',module)
     .add('L\'affichage d\'un bouton basique sur ReactJS',()=> <Bouton value='Test'></Bouton>)
@@ -17,3 +18,6 @@ storiesOf('Bouton',module)
     .add('Pour ajouter un borderColor à ce bouton',()=><Bouton value="Test 6" borderColor='black'/>)
     .add('Pour ajouter une color à ce bouton',()=><Bouton value="Test 7" color='red'/>)
     .add('Voici un bouton complet',()=><Bouton value="Test 8" onClick={()=> alert('clic')} backgroundColor='black' borderRadius='20px' width='90px' height='30px' borderColor= 'black' color='white'/>)
+storiesOf('Autocomplete', module)
+    .add('L\'affichage d\'un autocomplete basique sur ReactJS',()=><Autocomplete  data={[{name: 'France'},{name: 'Angleterre'},{name: 'Espagne'}]}/>)
+    .add('Ajouter un placeholder', ()=><Autocomplete  data={[{name: 'France'},{name: 'Angleterre'},{name: 'Espagne'}]} placeholder='Saisir un pays'/>)
